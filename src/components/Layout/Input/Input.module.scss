@@ -1,0 +1,190 @@
+@import "../../../asset/styles/globals.scss";
+
+.button{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    &.full_size{
+        width: 100% !important;
+    }
+    &.primary{
+        @include vw-convert-pc(height, 56);
+        @include vw-convert-pc(padding, 0 32);
+        @include vw-convert-pc(border-radius, 28);
+        background: $brandcolor2;
+        @include vw-convert-pc(font-size, 18);
+        font-weight: bold;
+        color: $white;
+
+        &:hover::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include background-opacity($black,0.16);
+            content: '';
+        }
+        &:disabled::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include background-opacity($black,0.8);
+            content: '';
+        }
+
+        @include breakpoint(tablet) {
+            height: 40px;
+            padding: 0 24px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(height, 40);
+            @include vw-convert-mo(padding, 0 24);
+            @include vw-convert-mo(border-radius, 20);
+            @include vw-convert-mo(font-size, 14);
+        }
+    }
+    &.primary__white{
+        @include vw-convert-pc(height, 56);
+        @include vw-convert-pc(padding, 0 32);
+        @include vw-convert-pc(border-radius, 28);
+        background: $white;
+        @include vw-convert-pc(font-size, 18);
+        font-weight: bold;
+        color:$black;
+
+        &:hover::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include background-opacity($black,0.16);
+            content: '';
+        }
+        &:disabled::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include background-opacity($black,0.8);
+            content: '';
+        }
+
+        @include breakpoint(tablet) {
+            height: 40px;
+            padding: 0 24px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(height, 40);
+            @include vw-convert-mo(padding, 0 24);
+            @include vw-convert-mo(border-radius, 20);
+            @include vw-convert-mo(font-size, 14);
+        }
+    }
+    &.secondary{
+        @include vw-convert-pc(height, 41);
+        @include vw-convert-pc(padding, 0 64);
+        border: solid 1px $brandcolor2;
+        @include vw-convert-pc(border-radius, 10);
+        background: transparent;
+        @include vw-convert-pc(font-size, 14);
+        font-weight: bold;
+        color: $brandcolor2;
+
+        &:hover::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include background-opacity($brandcolor2,0.08);
+            content: '';
+        }
+        &:disabled{
+            opacity: 0.5;
+            &:hover:before{
+                content: none;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            height: 44px;
+            padding: 0 24px;
+            border-radius: 22px;
+            font-size: 14px;
+        }
+        
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(height, 40);
+            @include vw-convert-mo(padding, 0 24);
+            @include vw-convert-mo(border-radius, 20);
+            @include vw-convert-mo(font-size, 14);
+        }
+    }
+    &.tertiary{
+        @include vw-convert-pc(height, 43);
+        @include vw-convert-pc(padding, 0 32);
+        border: solid 1px $gray;
+        @include vw-convert-pc(border-radius, 22);
+        background: transparent;
+        @include vw-convert-pc(font-size, 14);
+        font-weight: bold;
+        color: $white;
+
+        &:hover::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include background-opacity($white,0.08);
+            content: '';
+        }
+        &:disabled{
+            opacity: 0.5;
+            &:hover:before{
+                content: none;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            height: 44px;
+            padding: 0 24px;
+            border-radius: 22px;
+            font-size: 14px;
+        }
+        
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(height, 44);
+            @include vw-convert-mo(padding, 0 24);
+            @include vw-convert-mo(border-radius, 22);
+            @include vw-convert-mo(font-size, 14);
+        }
+    }
+    &.textlink{
+        background: transparent;
+        @include vw-convert-pc(font-size, 16);
+        font-weight: normal;
+        color: $white;
+        &:hover{
+            text-decoration: underline;
+        }
+        @include breakpoint(tablet) {
+            font-size: 14px;
+        }
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(font-size, 14);
+        }
+    }
+
+}

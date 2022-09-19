@@ -1,0 +1,25 @@
+@import "../../../asset/styles/globals.scss";
+
+.guide{
+    min-height: 100vh;
+    background-color:#341267;
+    color: #fff;
+    padding: 50px 20px;
+    &__area{
+        @include vw-convert-pc(margin-bottom,30);
+    }
+}
+.heading{
+    &__h1{
+        @include vw-convert-pc(font-size,40);
+        @include vw-convert-pc(margin-bottom,30);
+    }
+    &__h2{
+        @include vw-convert-pc(font-size,30);
+        @include vw-convert-pc(margin-bottom,20);
+    }
+    &__h3{
+        @include vw-convert-pc(font-size,25);
+        @include vw-convert-pc(margin-bottom,15);
+    }
+}
