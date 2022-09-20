@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+    <g data-name="타원 187" style="stroke:#a469ff;stroke-width:.5px;fill:none">
+        <circle cx="6" cy="6" r="6" style="stroke:none"/>
+        <circle cx="6" cy="6" r="5.75" style="fill:none"/>
+    </g>
+    <path data-name="합치기 79" d="M0 6V2.4h1.2V6zm0-4.8V0h1.2v1.2z" transform="translate(5.4 3)" style="fill:#a469ff"/>
+</svg>

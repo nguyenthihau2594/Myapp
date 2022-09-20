@@ -4,22 +4,73 @@
     min-height: 100vh;
     background-color:#341267;
     color: #fff;
-    padding: 50px 20px;
+    @include vw-convert-pc(padding,50 20);
+
+    @include breakpoint(tablet) {
+        padding: 50px 20px;
+    }
+    @include breakpoint(mobile) {
+        @include vw-convert-mo(padding,50 20);
+    }
+    &__section{
+        @include vw-convert-pc(margin-bottom,30);
+        border-bottom: 1px solid $white;
+        @include breakpoint(tablet) {
+            margin-bottom: 30px;
+        }
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(margin-bottom,30);
+        }
+    }
     &__area{
         @include vw-convert-pc(margin-bottom,30);
+
+        @include breakpoint(tablet) {
+            margin-bottom: 30px;
+        }
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(margin-bottom,30);
+        }
     }
 }
 .heading{
     &__h1{
-        @include vw-convert-pc(font-size,40);
         @include vw-convert-pc(margin-bottom,30);
+        @include vw-convert-pc(font-size,40);
+
+        @include breakpoint(tablet) {
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(margin-bottom,30);
+            @include vw-convert-mo(font-size,30);
+        }
     }
     &__h2{
+        @include vw-convert-pc(margin-bottom,30);
         @include vw-convert-pc(font-size,30);
-        @include vw-convert-pc(margin-bottom,20);
+
+        @include breakpoint(tablet) {
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(margin-bottom,30);
+            @include vw-convert-mo(font-size,25);
+        }
     }
     &__h3{
-        @include vw-convert-pc(font-size,25);
         @include vw-convert-pc(margin-bottom,15);
+        @include vw-convert-pc(font-size,20);
+
+        @include breakpoint(tablet) {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        @include breakpoint(mobile) {
+            @include vw-convert-mo(margin-bottom,15);
+            @include vw-convert-mo(font-size,20);
+        }
     }
 }

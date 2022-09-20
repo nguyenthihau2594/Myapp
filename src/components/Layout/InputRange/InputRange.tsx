@@ -1,6 +1,6 @@
 
 import { InputHTMLAttributes } from "react";
-import s from "./Input.module.scss";
+import s from "./InputRange.module.scss";
 import cx from "classnames";
 
 export interface InputProps extends  InputHTMLAttributes<HTMLInputElement> {
@@ -11,7 +11,7 @@ export interface InputProps extends  InputHTMLAttributes<HTMLInputElement> {
   placeholder?:string;
 }
 
-function Input(props: InputProps) {
+function InputRange(props: InputProps) {
   const {
     kind,
     label,
@@ -33,4 +33,4 @@ function Input(props: InputProps) {
   );
 }
 
-export default Input;
+export default InputRange;

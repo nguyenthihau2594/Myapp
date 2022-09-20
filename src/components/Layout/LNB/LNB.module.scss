@@ -1,0 +1,83 @@
+@import "../../../asset/styles/globals.scss";
+
+.myinfo{
+    @include vw-convert-pc(width, 214);
+    @include vw-convert-pc(padding, 12 20);
+    @include vw-convert-pc(border-radius, 10);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: $backgroundcolor6;
+    .avatar{
+        display: block;
+        @include vw-convert-pc(width, 40);
+        @include vw-convert-pc(height, 40);
+        @include vw-convert-pc(margin, 0 auto 10);
+        @include vw-convert-pc(border-radius, 10);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .btn_login{
+        display: block;
+        text-align: center;
+        width: 100%;
+        @include vw-convert-pc(height, 37);
+        border: solid 1px $brandcolor2;
+        @include vw-convert-pc(border-radius, 10);
+        font-family: "Pretendard";
+        @include vw-convert-pc(font-size, 14);
+        font-weight: bold;
+        line-height: 1.21;
+        color: $brandcolor2;
+    }
+    .name{
+        display: block;
+        @include vw-convert-pc(margin-bottom, 9);
+        font-family: "Pretendard";
+        @include vw-convert-pc(font-size, 13);
+        line-height: 1.23;
+        color: $textcolor5;
+        text-align: center;
+    }
+    .level{
+        display: block;
+        @include vw-convert-pc(padding,12 19 10 15);
+        @include vw-convert-pc(border-radius, 10);
+        background-color: $backgroundcolor7;
+        text-align: left;
+        &__text{
+            font-family: "Montserrat";
+            font-size: 12px;
+            color: $textcolor6;
+            .ico_info{
+                display: inline-block;
+                @include vw-convert-pc(margin-right, 4);
+                line-height: 1;
+            }
+            .number{
+                display: inline-block;
+                @include vw-convert-pc(margin-left, 4);
+                @include vw-convert-pc(font-size, 12);
+                font-weight: bold;
+            }
+        }
+        .level__process{
+            display: block;
+            position: relative;
+            @include vw-convert-pc(height,9);
+            @include vw-convert-pc(margin-top, 6);
+            @include vw-convert-pc(border-radius, 5);
+            background-color: $backgroundcolor2;
+            &__exp{
+                display: inline-block;
+                position: absolute;
+                @include vw-convert-pc(top, 2);
+                @include vw-convert-pc(left, 2);
+                @include vw-convert-pc(height, 5);
+                @include vw-convert-pc(border-radius, 3);
+                background-image: linear-gradient(to left, $backgroundcolor8 109%, $backgroundcolor9 -9%);
+            }
+        }
+    }
+}

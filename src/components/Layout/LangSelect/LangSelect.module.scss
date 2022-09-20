@@ -1,0 +1,44 @@
+@import "../../../asset/styles/globals.scss";
+
+.langselect{
+    display: inline-block;
+    position: relative;
+    .btn_langselect{
+        display: inline-block;
+        @include vw-convert-pc(width,68);
+        @include vw-convert-pc(height,32);
+        @include vw-convert-pc(border-radius,16);
+        @include background-opacity($black,0.18);
+        .langselect__text{
+            display: inline-block;
+            @include vw-convert-pc(margin-left,4);
+            font-family: "Pretendard";
+            color: $white;
+            @include vw-convert-pc(font-size,14);
+            font-weight: bold;
+        }
+    }
+    &__list{
+        position: absolute;
+        top: 36px;
+        right: 0;
+        @include vw-convert-pc(width,48);
+        @include vw-convert-pc(border-radius,8);
+        @include vw-convert-pc(padding,8 0);
+        @include background-opacity($black,0.18);
+    }
+    &__item{
+        display: block;
+        width: 100%;
+        @include vw-convert-pc(height,20);
+        font-family: "Pretendard";
+        @include vw-convert-pc(font-size,13);
+        color: $white;
+        font-weight: bold;
+        text-align: center;
+        &:hover{
+            @include background-opacity($white,0.05);
+        }
+    }
+
+}

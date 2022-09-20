@@ -1,5 +1,7 @@
 import Button from '../../Layout/Button/Button';
 import Input from '../../Layout/Input/Input';
+import LangSelect from '../../Layout/LangSelect/LangSelect';
+import Myinfo from '../../Layout/Myinfo/Myinfo';
 import s from './Guide.module.scss';
 
 function Guide() {
@@ -42,13 +44,30 @@ function Guide() {
           <h2 className={s.heading__h2}>Input text</h2>
           <div className={s.guide__area}>
             <h3 className={s.heading__h3}>Text Field Type1</h3>
-            <Input kind='type1' label='Text'  />
+            <Input kind="type1" error='Error Text' placeholder='Text' />
           </div>
           <div className={s.guide__area}>
             <h3 className={s.heading__h3}>Text Field Type2</h3>
+            <Input kind="type2" error='Error Text' placeholder='Text' />
           </div>
           <div className={s.guide__area}>
-            <h3 className={s.heading__h3}>Text Field Area</h3>
+            <h3 className={s.heading__h3}>Text Field Type3</h3>
+            <Input kind="type3" label='Index' error='Error Text' />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>Language</h2>
+          <div className={s.guide__area}>
+            <LangSelect />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>My info</h2>
+          <div className={s.guide__area}>
+            <h3 className={s.heading__h3}>Login</h3>
+            <Myinfo isLogin={false} />
+            <h3 className={s.heading__h3} style={{marginTop: "30px"}}>Not Login</h3>
+            <Myinfo isLogin={true} name="어둠의 냥크니스" level={15} />
           </div>
         </div>
       </div>
