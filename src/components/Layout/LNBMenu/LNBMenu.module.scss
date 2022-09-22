@@ -1,0 +1,30 @@
+@import "../../../asset/styles/globals.scss";
+
+.lbn_menu{
+    display: block;
+}
+.menu{                        
+    &__item{
+        a{
+            position: relative;
+            display: block;
+            @include vw-convert-pc(padding,10 70 11 24);
+            @include vw-convert-pc(border-radius,10);
+            font-family: "Pretendard";
+            color: $textcolor5;
+            font-weight: 500;
+            &:hover{
+                color: $white;
+            }
+            &.is_active{
+                @include background-opacity($white,0.1);
+            }
+            .icon{
+                position: absolute;
+                @include vw-convert-pc(top,12);
+                @include vw-convert-pc(right,30);
+            }
+        }
+        
+    }
+}

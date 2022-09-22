@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
+    <defs>
+        <filter id="rg6et3tura" x="0" y="0" width="74" height="74" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".502"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g style="filter:url(#rg6et3tura)">
+        <circle data-name="타원 105" cx="28" cy="28" r="28" transform="translate(9 6)" style="fill:#fff"/>
+    </g>
+    <path data-name="패스 266432" d="M34.03 23.939 44.091 34 34.03 44.06l-2.121-2.121L39.848 34l-7.939-7.94z"/>
+</svg>

@@ -9,7 +9,7 @@ const language = ['KR','EN','CN'];
 
 function LangSelect() {
 
-  const [select,setSelect] = useState('KR');
+  const [select,setSelect] = useState(language[0]);
 
   return (
     <>

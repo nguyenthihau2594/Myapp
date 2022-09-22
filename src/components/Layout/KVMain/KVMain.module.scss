@@ -1,0 +1,75 @@
+@import "../../../asset/styles/globals.scss";
+
+.swiper_kv{
+    position: relative;
+}
+.slider{
+    &__item{
+        position: relative;
+    }
+    &__img{
+        img{
+            width: 100%;
+        }
+    }
+    &__info{
+        position: absolute;
+        @include vw-convert-pc(top, 240);
+        @include vw-convert-pc(left, 128);
+        @include vw-convert-pc(width, 490);
+        color: $white;
+        .title{
+            @include vw-convert-pc(margin-bottom, 20);
+            font-family: 'Black Han Sans';
+            @include vw-convert-pc(font-size, 64);
+            font-weight: normal;
+            line-height: 1.09;
+        }
+        .desc{
+            @include vw-convert-pc(margin-bottom, 60);
+            @include vw-convert-pc(font-size, 22);
+            line-height: 1.45;
+            font-weight: 500;
+        }
+        .btn_list{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .btn_start{
+                @include vw-convert-pc(margin-left, 8);
+            }
+        }
+    }
+}
+
+.btn_prev{
+    position: absolute;
+    @include vw-convert-pc(top, 415);
+    @include vw-convert-pc(left, 0);
+    z-index: 999;
+}
+.btn_next{
+    position: absolute;
+    @include vw-convert-pc(top, 415);
+    @include vw-convert-pc(right, 0);
+    z-index: 999;
+}
+:global {
+    .swiper-pagination{
+        position: absolute;
+        @include vw-convert-pc(bottom, 0);
+        @include vw-convert-pc(left, 0);
+        text-align: left;
+        &-bullet{
+            @include vw-convert-pc(width, 6);
+            @include vw-convert-pc(height, 6);
+            @include vw-convert-pc(border-radius, 6);
+            @include background-opacity($white,0.3);
+            transition: width 0.5s;
+        }
+        &-bullet-active{
+            @include vw-convert-pc(width, 20);
+            background-color: $white;
+        }
+    }
+}

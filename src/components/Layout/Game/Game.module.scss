@@ -1,0 +1,134 @@
+@import "../../../asset/styles/globals.scss";
+.kv_banner{
+    position: relative;
+    .big__title{
+        @include vw-convert-pc(font-size,32);
+        font-weight: bold;
+        line-height: 1.22;
+        color: $textcolor7;
+        text-transform: uppercase;
+    }
+    .control{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        .btn_prev{
+            @include vw-convert-pc(width,24);
+            @include vw-convert-pc(height,24);
+            background: url(../../../asset/images/icons/ico_prev01.svg) center no-repeat;
+            &:hover{
+                background: url(../../../asset/images/icons/ico_prev01_off.svg) center no-repeat;
+            }
+        }
+        .btn_next{
+            @include vw-convert-pc(width,24);
+            @include vw-convert-pc(height,24);
+            background: url(../../../asset/images/icons/ico_next01.svg) center no-repeat;
+            &:hover{
+                background: url(../../../asset/images/icons/ico_next01_off.svg) center no-repeat;
+            }
+        }
+    }
+    .game_pagination{
+        display: block;
+        @include vw-convert-pc(margin,0 4);
+        @include vw-convert-pc(font-size,13);
+        font-weight: bold;
+        color: #888;
+    }
+}
+.swiper_game{
+    .slider__img{
+        position: relative;
+        @include vw-convert-pc(margin-bottom,30);
+        .bg{
+            position: absolute;
+            @include vw-convert-pc(bottom,-20);
+            z-index: -1;
+            transition: transform 0.5s;
+            img{
+                width: 100%;
+            }
+        }
+        .img{
+            overflow: hidden;
+            transition: transform 0.5s;
+            img{
+                transition: transform 0.5s;
+                width: 100%;
+            }
+        }
+        .logo{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include vw-convert-pc(width,310);
+            @include vw-convert-pc(bottom,40);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .slider__text{
+        text-align: center;
+        .title{
+            display: block;
+            @include vw-convert-pc(margin-bottom,12);
+            font-family: "Pretendard";
+            @include vw-convert-pc(font-size,24);
+            font-weight: 500;
+            line-height: 1.21;
+        }
+        .btn_list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn{
+                @include vw-convert-pc(height,32);
+                @include vw-convert-pc(margin,0 3);
+                @include vw-convert-pc(padding,0 20);
+                @include vw-convert-pc(border-radius,16);
+                @include vw-convert-pc(font-size,13);
+                font-weight: 500;
+                background-color: #141227;
+                color: $textcolor5;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .slider__item:hover{
+        .bg{
+            transform: translateY(-20px);
+        }
+        .img{
+            transform: translateY(-20px);
+            img{
+                transform: translateY(10px);
+            }
+        }
+        
+    }
+    
+}
+
+:global {
+    .game_prev.swiper-button-disabled:disabled{
+            background: url(../../../asset/images/icons/ico_prev01_off.svg) center no-repeat;
+        
+    }
+    .game_next.swiper-button-disabled:disabled{
+            background: url(../../../asset/images/icons/ico_next01_off.svg) center no-repeat;
+    }
+    .swiper-pagination-total,
+    .swiper-pagination-current{
+        display: inline-block;
+        @include vw-convert-pc(width,20);
+        text-align: center;
+    }
+    .swiper-pagination-current{
+        color: $white;
+    }
+}

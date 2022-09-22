@@ -29,7 +29,8 @@ function Button(props: ButtonProps) {
         <button  type="button" 
         className={cx(s.button,
          s[`${kind}`], 
-         {[s.full_size]:isFullWidth}
+         {[s.full_size]:isFullWidth},
+         className
          )}
         disabled={disable}
         {...rest}>

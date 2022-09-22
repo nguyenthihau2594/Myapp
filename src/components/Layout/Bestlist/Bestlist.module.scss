@@ -1,0 +1,105 @@
+@import "../../../asset/styles/globals.scss";
+
+.news__wrap{
+    position: relative;
+    .sub__title{
+        @include vw-convert-pc(margin-bottom,20);
+        font-weight: bold;
+        @include vw-convert-pc(font-size,32);
+        font-weight: bold;
+        line-height: 1.22;
+        color: #ebebeb;
+    }
+    .btn_view{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    .news__list{
+        display: flex;
+        justify-content: flex-start;
+        align-items: initial;
+        flex-wrap: wrap;
+        @include vw-convert-pc(margin,0 -11);
+        .news__item{
+            width: calc(100%/3);
+            @include vw-convert-pc(margin-bottom,22);
+            @include vw-convert-pc(padding,0 11);
+            a{
+                display: flex;
+                justify-content: flex-start;
+                align-items: initial;
+                overflow: hidden;
+                position: relative;
+                @include vw-convert-pc(padding,10 20 10 10);
+                @include vw-convert-pc(border-radius, 20);
+                border: solid 1px rgba(255, 255, 255, 0.06);
+                background-image: linear-gradient(119deg, #271a44 41%, #271a44 53%, #3e2472 101%);
+                color: $white;
+                .thumb{
+                    @include vw-convert-pc(width,140);
+                    @include vw-convert-pc(height,140);
+                    @include vw-convert-pc(margin-right,20);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .info{
+                    @include vw-convert-pc(padding,10 0 10);
+                    .title{
+                        @include vw-convert-pc(height, 52);
+                        @include vw-convert-pc(margin-bottom, 6);
+                        @include vw-convert-pc(font-size,18);
+                        font-family: "Pretendard";
+                        font-weight: 500;
+                        line-height: 1.44;
+                        @include multi-ellipsis(2);
+                    }
+                    .desc{
+                        @include vw-convert-pc(margin-bottom, 28);
+                        @include vw-convert-pc(font-size,14);
+                        font-family: "Pretendard";
+                        font-weight: normal;
+                        line-height: 1.21;
+                        color: #a469ff;
+                    }
+                    .price{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #ff9600;
+                        .icon{
+                            display: block;
+                            @include vw-convert-pc(margin-right, 4);
+                            line-height: 0;
+                        }
+                    }
+                }
+                .hover{
+                    display: none;
+                }
+                &:hover{
+                    .hover{
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        @include vw-convert-pc(padding,20);
+                        @include background-opacity(#ff9600,0.8);
+                        color: $black;
+                        @include vw-convert-pc(font-size,18);
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.is_big{
+               display: block; 
+            }
+        }
+    }
+}

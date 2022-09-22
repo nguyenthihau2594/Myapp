@@ -2,7 +2,16 @@ import Button from '../../Layout/Button/Button';
 import Input from '../../Layout/Input/Input';
 import LangSelect from '../../Layout/LangSelect/LangSelect';
 import Myinfo from '../../Layout/Myinfo/Myinfo';
+import LNBMenu from '../../Layout/LNBMenu/LNBMenu';
+import KVMain from '../../Layout/KVMain/KVMain';
+import Game from '../../Layout/Game/Game';
+import Newlist from '../../Layout/NewList/Newlist';
+import Bestlist from '../../Layout/Bestlist/Bestlist';
+
 import s from './Guide.module.scss';
+import data from '../../Layout/NewList/DataNewlist.json';
+import Bestdata from '../../Layout/Bestlist/DataBestlist.json';
+
 
 function Guide() {
   return (
@@ -13,7 +22,7 @@ function Guide() {
           <h2 className={s.heading__h2}>Button</h2>
           <div className={s.guide__area}>
             <h3 className={s.heading__h3}>Primary Button</h3>
-            <Button kind="primary" as="button" >자세히 보기</Button>
+            <Button kind="primary" as="button">자세히 보기</Button>
             <Button kind="primary" as="button" disable={true}  style={{marginLeft: '20px'}}  >자세히 보기</Button>
           </div>
           <div className={s.guide__area}>
@@ -68,6 +77,36 @@ function Guide() {
             <Myinfo isLogin={false} />
             <h3 className={s.heading__h3} style={{marginTop: "30px"}}>Not Login</h3>
             <Myinfo isLogin={true} name="어둠의 냥크니스" level={15} />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>LNB menu</h2>
+          <div className={s.guide__area}>
+            <LNBMenu />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>KV Banner</h2>
+          <div className={s.guide__area}>
+            <KVMain />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>Game</h2>
+          <div className={s.guide__area}>
+            <Game />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>News</h2>
+          <div className={s.guide__area}>
+            <Newlist news={data} />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>Best</h2>
+          <div className={s.guide__area}>
+            <Bestlist best={Bestdata} />
           </div>
         </div>
       </div>

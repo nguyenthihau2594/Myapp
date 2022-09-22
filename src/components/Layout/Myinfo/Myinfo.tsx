@@ -67,11 +67,11 @@ function Myinfo(props: MyinfoProps) {
       <>
       <Menu as="div" className={cx(s.menu)}>
         <Menu.Button as="button" className={cx(s.btn_menu)}><IconMenu /></Menu.Button>
-        <Menu.Items className={cx(s.menu__list)}>
-          <Menu.Item><Link to="/none" className={cx(s.menu__item)}>Menu1</Link></Menu.Item>
-          <Menu.Item><Link to="/none" className={cx(s.menu__item)}>Menu2</Link></Menu.Item>
-          <Menu.Item><Link to="/none" className={cx(s.menu__item)}>Menu3</Link></Menu.Item>
-          <Menu.Item><Link to="/none" className={cx(s.menu__item)}>Menu4</Link></Menu.Item>
+        <Menu.Items as="ul" className={cx(s.menu__list)}>
+          <Menu.Item as="li" className={cx(s.menu__item)}><Link to="/none">Menu1</Link></Menu.Item>
+          <Menu.Item as="li" className={cx(s.menu__item)}><Link to="/none">Menu2</Link></Menu.Item>
+          <Menu.Item as="li" className={cx(s.menu__item)}><Link to="/none">Menu3</Link></Menu.Item>
+          <Menu.Item as="li" className={cx(s.menu__item)}><Link to="/none">Menu4</Link></Menu.Item>
         </Menu.Items>
       </Menu>
       </>
