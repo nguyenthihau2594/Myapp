@@ -1,0 +1,36 @@
+@import "../../../asset/styles/globals.scss";
+
+.company{
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        @include vw-convert-pc(height, 120);
+        text-align: center;
+    }
+    &__faq{
+        background: url(../../../asset/images/thumbnail/home/img_faq_bg.png) center no-repeat;
+        background-size: cover;
+        border-right: 1px solid rgba(255,255,255,0.05);
+    }
+    &__contact{
+        background: url(../../../asset/images/thumbnail/home/img_contact_bg.png) center no-repeat;
+        background-size: cover;
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        @include vw-convert-pc(font-size, 18);
+        font-weight: bold;
+        line-height: 1.22;
+        text-transform: uppercase;
+        span{
+            display: inline-block;
+            @include vw-convert-pc(margin-left, 10);
+        }
+    }
+}

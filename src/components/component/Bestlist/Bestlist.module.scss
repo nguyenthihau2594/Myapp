@@ -1,0 +1,166 @@
+@import "../../../asset/styles/globals.scss";
+
+.news__wrap{
+    position: relative;
+    .sub__title{
+        @include vw-convert-pc(margin-bottom,20);
+        font-weight: bold;
+        @include vw-convert-pc(font-size,32);
+        font-weight: bold;
+        line-height: 1.22;
+        color: #ebebeb;
+    }
+    .btn_view{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    .news__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include vw-convert-pc(margin,0 -11);
+        .news__item{
+            @include vw-convert-pc(margin-bottom,22);
+            @include vw-convert-pc(padding,0 11);
+            a{
+                display: block;
+                overflow: hidden;
+                position: relative;
+                @include vw-convert-pc(padding,10);
+                @include vw-convert-pc(border-radius, 20);
+                border: solid 1px rgba(255, 255, 255, 0.06);
+                background-image: linear-gradient(119deg, #271a44 41%, #271a44 53%, #3e2472 101%);
+                color: $white;
+                .thumb{
+                    width: 100%;
+                    @include vw-convert-pc(height,146);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                .info{
+                    @include vw-convert-pc(padding,20 0 10);
+                    .title{
+                        @include vw-convert-pc(height, 21);
+                        @include vw-convert-pc(margin-bottom, 4);
+                        @include vw-convert-pc(font-size,18);
+                        font-family: "Pretendard";
+                        font-weight: 500;
+                        line-height: 1.22;
+                        @include multi-ellipsis(1);
+                    }
+                    .desc{
+                        @include vw-convert-pc(margin-bottom, 20);
+                        @include vw-convert-pc(font-size,14);
+                        font-family: "Pretendard";
+                        font-weight: normal;
+                        line-height: 1.21;
+                        color: #a469ff;
+                    }
+                    .price{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        @include vw-convert-pc(font-size,18);
+                        font-weight: bold;
+                        color: #ff9600;
+                        .icon{
+                            display: block;
+                            @include vw-convert-pc(margin-right, 4);
+                            line-height: 0;
+                        }
+                    }
+                }
+                .hover{
+                    display: none;
+                }
+                &:hover{
+                    .hover{
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        @include vw-convert-pc(padding,20);
+                        @include background-opacity(#ff9600,0.8);
+                        color: $black;
+                        @include vw-convert-pc(font-size,18);
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.is_big{
+               display: block; 
+               position: relative;
+               width: calc(100%/3);
+               a{
+                    position: relative;
+                    @include vw-convert-pc(padding,0);
+                    background: none;
+                    .thumb{
+                        width: 100%;
+                        height: 100%;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: 100%;
+                        }
+                    }
+                    .info{
+                        position: absolute;
+                        @include vw-convert-pc(left,10);
+                        @include vw-convert-pc(right,10);
+                        @include vw-convert-pc(bottom,10);
+                        @include vw-convert-pc(padding,20);
+                        @include vw-convert-pc(border-radius,16);
+                        @include background-opacity($black,0.2);
+                        -webkit-backdrop-filter: blur(15.8px);
+                        backdrop-filter: blur(15.8px);
+                        .title{
+                            @include vw-convert-pc(height, 52);
+                            @include vw-convert-pc(margin-bottom, 6);
+                            line-height: 1.44;
+                            @include multi-ellipsis(2);
+                        }
+                        .desc{
+                            @include vw-convert-pc(margin-bottom, 20);
+                            @include vw-convert-pc(font-size,14);
+                            font-family: "Pretendard";
+                            font-weight: normal;
+                            line-height: 1.21;
+                            color: #a469ff;
+                        }
+                        .price{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            @include vw-convert-pc(font-size,18);
+                            font-weight: bold;
+                            color: #ff9600;
+                            .icon{
+                                display: block;
+                                @include vw-convert-pc(margin-right, 4);
+                                line-height: 0;
+                            }
+                        }
+                    }
+               }
+            }
+        }
+        .news__list__right{
+            display: flex;
+            justify-content: flex-start;
+            align-items: initial;
+            flex-wrap: wrap;
+            width: calc(100%/3*2);
+            .news__item{
+                width: 25%;
+            }
+        }
+    }
+}

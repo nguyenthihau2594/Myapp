@@ -1,16 +1,19 @@
-import Button from '../../Layout/Button/Button';
-import Input from '../../Layout/Input/Input';
-import LangSelect from '../../Layout/LangSelect/LangSelect';
-import Myinfo from '../../Layout/Myinfo/Myinfo';
-import LNBMenu from '../../Layout/LNBMenu/LNBMenu';
-import KVMain from '../../Layout/KVMain/KVMain';
-import Game from '../../Layout/Game/Game';
-import Newlist from '../../Layout/NewList/Newlist';
-import Bestlist from '../../Layout/Bestlist/Bestlist';
+import Button from '../../component/Button/Button';
+import Input from '../../component/Input/Input';
+import LangSelect from '../../component/LangSelect/LangSelect';
+import Myinfo from '../../component/Myinfo/Myinfo';
+import LNBMenu from '../../component/LNBMenu/LNBMenu';
+import KVMain from '../../component/KVMain/KVMain';
+import Game from '../../component/Game/Game';
+import Newlist from '../../component/NewList/Newlist';
+import Bestlist from '../../component/Bestlist/Bestlist';
+import Banner from '../../component/Banner/Banner';
+import Company from '../../component/Company/Company';
+import Footer from '../../component/Footer/Footer';
 
 import s from './Guide.module.scss';
-import data from '../../Layout/NewList/DataNewlist.json';
-import Bestdata from '../../Layout/Bestlist/DataBestlist.json';
+import data from '../../component/NewList/DataNewlist.json';
+import Bestdata from '../../component/Bestlist/DataBestlist.json';
 
 
 function Guide() {
@@ -107,6 +110,24 @@ function Guide() {
           <h2 className={s.heading__h2}>Best</h2>
           <div className={s.guide__area}>
             <Bestlist best={Bestdata} />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>Banner</h2>
+          <div className={s.guide__area}>
+            <Banner />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>Company</h2>
+          <div className={s.guide__area}>
+            <Company />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>Footer</h2>
+          <div className={s.guide__area}>
+            <Footer />
           </div>
         </div>
       </div>

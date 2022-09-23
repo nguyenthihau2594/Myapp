@@ -4,17 +4,17 @@ import s from "./Bestlist.module.scss";
 import { ReactComponent as IconPrice } from "../../../asset/images/icons/ico_price.svg";
 
 export interface BestitemProps {
-	big?:boolean;
 	thumb: string;
 	title: string;
 	desc: string;
 	price: number;
 	total: number;
 	available: number;
+	className?: string;
 }
 
 function Bestitem(props: BestitemProps) {
-	const {big=false,thumb,title,desc,price,total,available}=props;
+	const {thumb,title,desc,price,total,available,className}=props;
 
 	function formatNumber(isNumber: number) {
 	  let formattedNumber = Number(isNumber)
@@ -28,7 +28,7 @@ function Bestitem(props: BestitemProps) {
 	}
 
 	return (
-		<div className={cx(s.news__item, s[`${big===true && s.is__big}`])}>
+		<div className={cx(s.news__item,  className && className)}>
 			<a href="/none">
 				<div className={s.thumb}><img src={thumb} alt="" /></div>
 				<div className={s.info}>

@@ -1,0 +1,38 @@
+@import "../../../asset/styles/globals.scss";
+
+.footer{
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    @include vw-convert-pc(padding,60 80 57);
+    background-color: #090119;
+    &__info{
+        position: relative;
+        .text{
+            @include vw-convert-pc(margin-bottom,39);
+            font-family: "Pretendard";
+            @include vw-convert-pc(font-size, 14);
+            font-weight: normal;
+            line-height: 1.71;
+            color: #888;
+        }
+        .sns__list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            .sns__item:last-child{
+                @include vw-convert-pc(margin-left,20);
+            }
+        }
+        .copyright{
+            @include vw-convert-pc(font-size, 14);
+            font-weight: bold;
+            color: #837e7e;
+            line-height: 1.71;
+            text-transform: uppercase;
+        }
+    }
+}
