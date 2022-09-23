@@ -18,6 +18,7 @@
             }
             &.is_active{
                 @include background-opacity($white,0.1);
+                color: $white;
             }
             .icon{
                 position: absolute;

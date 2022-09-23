@@ -1,8 +1,14 @@
-@import "../../../asset/styles/globals.scss";
-
-.banner{
-    width: 100%;
-    img{
-        width: 100%;
-    }
+@import "../../asset/styles/globals.scss";
+.wrap{
+    position: relative;
+    @include vw-convert-pc(padding-left,246);
+}
+.nav{
+    position: fixed;
+    left: 0;
+    top:0;
+    @include vw-convert-pc(width,246);
+    height: 100vh;
+    @include vw-convert-pc(padding,38 16);
+    background-color: #1a0e29;
 }

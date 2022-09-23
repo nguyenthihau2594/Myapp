@@ -46,11 +46,11 @@ function LNBMenu() {
           const Icon = item.icon;
           return(
             <li key={index} className={s.menu__item} >
-              <NavLink exact to={item.link}
+              <NavLink to={item.link} end
                 // className={cx(`${isActive===true && (s.is_active)}`)}
-                className={isActive  =>
-                  isActive ? s.is_active : s.link
-                } 
+                className={({ isActive }) =>
+                isActive ? cx(s.link, s.is_active): s.link
+              }
                 >{item.text}<span className={s.icon}><Icon/></span>
               </NavLink>
             </li>

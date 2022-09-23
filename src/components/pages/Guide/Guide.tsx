@@ -10,6 +10,7 @@ import Bestlist from '../../component/Bestlist/Bestlist';
 import Banner from '../../component/Banner/Banner';
 import Company from '../../component/Company/Company';
 import Footer from '../../component/Footer/Footer';
+import LNB from '../../component/LNB/LNB';
 
 import s from './Guide.module.scss';
 import data from '../../component/NewList/DataNewlist.json';
@@ -128,6 +129,12 @@ function Guide() {
           <h2 className={s.heading__h2}>Footer</h2>
           <div className={s.guide__area}>
             <Footer />
+          </div>
+        </div>
+        <div className={s.guide__section}>
+          <h2 className={s.heading__h2}>LNB</h2>
+          <div className={s.guide__area} style={{position: "relative", width:"100%", height: "100vh"}}>
+            <LNB />
           </div>
         </div>
       </div>

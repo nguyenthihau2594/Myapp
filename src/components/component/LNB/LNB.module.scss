@@ -1,0 +1,15 @@
+@import "../../../asset/styles/globals.scss";
+
+.lnb{
+    .logo{
+        @include vw-convert-pc(width,170);
+        @include vw-convert-pc(height,58);
+        @include vw-convert-pc(margin,0 auto 60);
+        img{
+            width: 100%;
+        }
+    }
+    .lnb__info{
+        @include vw-convert-pc(margin,0 auto 60);
+    }
+}
