@@ -1,2 +1,5 @@
 @import "../../../asset/styles/globals.scss";
 
+.section{
+    @include vw-convert-pc(margin-bottom,100);
+}

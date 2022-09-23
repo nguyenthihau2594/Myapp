@@ -81,6 +81,7 @@
             @include vw-convert-pc(font-size,24);
             font-weight: 500;
             line-height: 1.21;
+            color: $white;
         }
         .btn_list{
             display: flex;

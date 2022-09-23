@@ -2,6 +2,7 @@
 .wrap{
     position: relative;
     @include vw-convert-pc(padding-left,246);
+    background-color: #130722;
 }
 .nav{
     position: fixed;
@@ -11,4 +12,10 @@
     height: 100vh;
     @include vw-convert-pc(padding,38 16);
     background-color: #1a0e29;
+}
+.main{
+    width: 100%;
+    @include vw-convert-pc(max-width,1674);
+    @include vw-convert-pc(margin,0 auto);
+    @include vw-convert-pc(padding,0 80);
 }

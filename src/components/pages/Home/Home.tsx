@@ -10,17 +10,18 @@ import Bestdata from '../../component/Bestlist/DataBestlist.json';
 
 
 import s from "./Home.module.scss";
+import cx from "classnames";
 
 
 function Home() {
 	return (
 		<Layout>
 			<div className={s.home_page}>
-				<section className={s.kv__main}><KVMain /></section>
-				<section className={s.kv__main}><Game /></section>
-				<section className={s.kv__main}><News news={data} /></section>
-				<section className={s.kv__main}><Banner /></section>
-				<section className={s.kv__main}><Best best={Bestdata} /></section>
+				<section className={cx(s.kv__main, s.section)}><KVMain /></section>
+				<section className={cx(s.game, s.section)}><Game /></section>
+				<section className={cx(s.banner, s.section)}><Banner /></section>
+				<section className={cx(s.news, s.section)}><News news={data} /></section>
+				<section className={cx(s.best, s.section)}><Best best={Bestdata} /></section>
 			</div>
 		</Layout>
   );
