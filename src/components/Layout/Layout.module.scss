@@ -1,14 +1,26 @@
-@import "../../asset/styles/globals.scss";
+@import "../../asset/styles/mixins";
+
 .wrap{
     position: relative;
-    @include vw-convert-pc(padding-left,246);
+    z-index: 100;
+    padding-left: 246px;
     background-color: #130722;
+    &::before{
+        position: absolute;
+        top:0;
+        right: 0;
+        z-index: -1;
+        @include vw-convert-pc(width, 837);
+        @include vw-convert-pc(height, 600);
+        background-image: linear-gradient(210deg, #4b1996 20%, transparent 50%);
+        content: '';
+    }
 }
 .nav{
     position: fixed;
     left: 0;
     top:0;
-    @include vw-convert-pc(width,246);
+    width: 246px;
     height: 100vh;
     @include vw-convert-pc(padding,38 16);
     background-color: #1a0e29;
@@ -17,5 +29,10 @@
     width: 100%;
     @include vw-convert-pc(max-width,1674);
     @include vw-convert-pc(margin,0 auto);
-    @include vw-convert-pc(padding,0 80);
+    .language{
+        position: absolute;
+        @include vw-convert-pc(top,20);
+        @include vw-convert-pc(right,80);
+        z-index: 101;
+    }
 }

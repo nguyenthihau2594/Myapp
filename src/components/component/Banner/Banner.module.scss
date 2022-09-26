@@ -1,7 +1,8 @@
-@import "../../../asset/styles/globals.scss";
+@import "../../../asset/styles/mixins";
 
 .banner{
     width: 100%;
+    @include vw-convert-pc(padding,0 80);
     img{
         width: 100%;
     }

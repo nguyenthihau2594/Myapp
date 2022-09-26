@@ -19,8 +19,8 @@ function Home() {
 			<div className={s.home_page}>
 				<section className={cx(s.kv__main, s.section)}><KVMain /></section>
 				<section className={cx(s.game, s.section)}><Game /></section>
-				<section className={cx(s.banner, s.section)}><Banner /></section>
 				<section className={cx(s.news, s.section)}><News news={data} /></section>
+				<section className={cx(s.banner, s.section)}><Banner /></section>
 				<section className={cx(s.best, s.section)}><Best best={Bestdata} /></section>
 			</div>
 		</Layout>

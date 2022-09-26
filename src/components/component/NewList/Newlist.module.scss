@@ -1,7 +1,9 @@
-@import "../../../asset/styles/globals.scss";
+@import "../../../asset/styles/mixins";
+
 
 .news__wrap{
     position: relative;
+    @include vw-convert-pc(padding, 0 80);
     .sub__title{
         @include vw-convert-pc(margin-bottom,20);
         font-weight: bold;
@@ -13,7 +15,7 @@
     .btn_view{
         position: absolute;
         top:0;
-        right:0;
+        @include vw-convert-pc(right, 80);
     }
     .news__list{
         display: flex;
@@ -46,6 +48,7 @@
                     }
                 }
                 .info{
+                    flex: 1 1;
                     @include vw-convert-pc(padding,10 0 10);
                     .title{
                         @include vw-convert-pc(height, 52);

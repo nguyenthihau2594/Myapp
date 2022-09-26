@@ -1,5 +1,7 @@
-@import "../../../asset/styles/globals.scss";
-
+@import "../../../asset/styles/mixins";
+.home_page{
+    display: block;
+}
 .section{
     @include vw-convert-pc(margin-bottom,100);
 }

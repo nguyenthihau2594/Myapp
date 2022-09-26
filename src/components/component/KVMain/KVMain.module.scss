@@ -1,11 +1,21 @@
-@import "../../../asset/styles/globals.scss";
+@import "../../../asset/styles/mixins";
 
+
+.kv_banner{
+    position: relative;
+}
 .swiper_kv{
     position: relative;
 }
 .slider{
     &__item{
         position: relative;
+        @include vw-convert-pc(padding, 0 80);
+    }
+    &__content{
+        display: block;
+        background: url(../../../asset/images/thumbnail/home/img_kv_bg.png) bottom center no-repeat;
+        background-size: 100%;
     }
     &__img{
         img{
@@ -15,7 +25,7 @@
     &__info{
         position: absolute;
         @include vw-convert-pc(top, 240);
-        @include vw-convert-pc(left, 128);
+        @include vw-convert-pc(left, 208);
         @include vw-convert-pc(width, 490);
         color: $white;
         .title{
@@ -45,19 +55,35 @@
 .btn_prev{
     position: absolute;
     @include vw-convert-pc(top, 415);
-    @include vw-convert-pc(left, 0);
+    @include vw-convert-pc(left, 42);
     z-index: 999;
+    @include vw-convert-pc(width, 74);
+    @include vw-convert-pc(height, 74);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='74' viewBox='0 0 74 74'%3E%3Cdefs%3E%3Cfilter id='ce43r6kcja' x='0' y='0' width='74' height='74' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3'/%3E%3CfeGaussianBlur stdDeviation='3' result='blur'/%3E%3CfeFlood flood-opacity='.502'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg style='filter:url(%23ce43r6kcja)'%3E%3Ccircle data-name='타원 105' cx='28' cy='28' r='28' transform='translate(9 6)' style='fill:%23fff'/%3E%3C/g%3E%3Cpath data-name='패스 266431' d='M39.97 23.939 29.909 34 39.97 44.06l2.121-2.121L34.152 34l7.939-7.94z'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    &:hover,
+    &:disabled{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='74' viewBox='0 0 74 74'%3E%3Cdefs%3E%3Cfilter id='ce43r6kcja' x='0' y='0' width='74' height='74' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3'/%3E%3CfeGaussianBlur stdDeviation='3' result='blur'/%3E%3CfeFlood flood-opacity='.502'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg style='filter:url(%23ce43r6kcja)'%3E%3Ccircle data-name='타원 105' cx='28' cy='28' r='28' transform='translate(9 6)' style='fill:%23ccc'/%3E%3C/g%3E%3Cpath data-name='패스 266431' d='M39.97 23.939 29.909 34 39.97 44.06l2.121-2.121L34.152 34l7.939-7.94z'/%3E%3C/svg%3E%0A");
+    }
 }
 .btn_next{
     position: absolute;
     @include vw-convert-pc(top, 415);
-    @include vw-convert-pc(right, 0);
+    @include vw-convert-pc(right, 42);
     z-index: 999;
+    @include vw-convert-pc(width, 74);
+    @include vw-convert-pc(height, 74);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='74' viewBox='0 0 74 74'%3E%3Cdefs%3E%3Cfilter id='rg6et3tura' x='0' y='0' width='74' height='74' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3'/%3E%3CfeGaussianBlur stdDeviation='3' result='blur'/%3E%3CfeFlood flood-opacity='.502'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg style='filter:url(%23rg6et3tura)'%3E%3Ccircle data-name='타원 105' cx='28' cy='28' r='28' transform='translate(9 6)' style='fill:%23fff'/%3E%3C/g%3E%3Cpath data-name='패스 266432' d='M34.03 23.939 44.091 34 34.03 44.06l-2.121-2.121L39.848 34l-7.939-7.94z'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    &:hover,
+    &:disabled{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='74' viewBox='0 0 74 74'%3E%3Cdefs%3E%3Cfilter id='rg6et3tura' x='0' y='0' width='74' height='74' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3'/%3E%3CfeGaussianBlur stdDeviation='3' result='blur'/%3E%3CfeFlood flood-opacity='.502'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg style='filter:url(%23rg6et3tura)'%3E%3Ccircle data-name='타원 105' cx='28' cy='28' r='28' transform='translate(9 6)' style='fill:%23ccc'/%3E%3C/g%3E%3Cpath data-name='패스 266432' d='M34.03 23.939 44.091 34 34.03 44.06l-2.121-2.121L39.848 34l-7.939-7.94z'/%3E%3C/svg%3E%0A");
+    }
 }
 :global {
     .swiper-pagination{
         position: absolute;
-        @include vw-convert-pc(bottom, 0);
+        @include vw-convert-pc(bottom, 60);
         @include vw-convert-pc(left, 0);
         text-align: left;
         &-bullet{
@@ -71,5 +97,13 @@
             @include vw-convert-pc(width, 20);
             background-color: $white;
         }
+    }
+    .kv_pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
+        display: inline-block;
+        position: absolute;
+        @include vw-convert-pc(bottom, 60);
+        @include vw-convert-pc(left, 208);
+        z-index: 102;
+        width: auto;
     }
 }

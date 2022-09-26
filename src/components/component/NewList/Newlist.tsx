@@ -15,11 +15,6 @@ return (
 		<div className={s.sub__title}>News</div>
 		<div className={s.news__list}>
 			{news.map((item: NewitemProps,index:number) => {
-
-				// const {thumb, title, desc, price, total, available }= item;
-				// return(
-				// 	<Newitem thumb={thumb} title={title} desc={desc} price={price} total={total} available={available} key={index}/>
-				// ) tuong duong voi code duoi
 				return (
 					<Newitem thumb={item.thumb} title={item.title} desc={item.desc} price={item.price} total={item.total} available={item.available} key={index}/>
 				)

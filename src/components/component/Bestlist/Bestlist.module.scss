@@ -1,7 +1,9 @@
-@import "../../../asset/styles/globals.scss";
+@import "../../../asset/styles/mixins";
+
 
 .news__wrap{
     position: relative;
+    @include vw-convert-pc(padding, 0 80);
     .sub__title{
         @include vw-convert-pc(margin-bottom,20);
         font-weight: bold;
@@ -13,7 +15,7 @@
     .btn_view{
         position: absolute;
         top:0;
-        right:0;
+        @include vw-convert-pc(right,80);
     }
     .news__list{
         display: flex;
@@ -38,12 +40,10 @@
                     img{
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
-                        object-position: center;
                     }
                 }
                 .info{
-                    @include vw-convert-pc(padding,20 0 10);
+                    @include vw-convert-pc(padding,20 0 8);
                     .title{
                         @include vw-convert-pc(height, 21);
                         @include vw-convert-pc(margin-bottom, 4);
@@ -66,6 +66,7 @@
                         justify-content: flex-start;
                         align-items: center;
                         @include vw-convert-pc(font-size,18);
+                        line-height: 1.22;
                         font-weight: bold;
                         color: #ff9600;
                         .icon{

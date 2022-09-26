@@ -11,7 +11,7 @@ import { ReactComponent as IconDiscord } from "../../../asset/images/icons/ico_d
 
 const menus = [
   {
-    link: "/guide",
+    link: "/home",
     text: "홈",
     icon: IconHome
   },

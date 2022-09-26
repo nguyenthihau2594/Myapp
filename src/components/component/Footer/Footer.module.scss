@@ -1,9 +1,7 @@
-@import "../../../asset/styles/globals.scss";
+@import "../../../asset/styles/mixins";
+
 
 .footer{
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: flex-start;
     @include vw-convert-pc(padding,60 80 57);
     background-color: #090119;
     &__info{
