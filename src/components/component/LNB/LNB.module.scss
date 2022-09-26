@@ -1,15 +1,57 @@
-@import "../../../asset/styles/globals.scss";
+@import "../../../asset/styles/_variables.scss";
+@import "../../../asset/styles/_mixins.scss";
+
 
 .lnb{
-    .logo{
-        @include vw-convert-pc(width,170);
-        @include vw-convert-pc(height,58);
-        @include vw-convert-pc(margin,0 auto 60);
-        img{
-            width: 100%;
+    .lnb_inner{
+        @include breakpoint(tablet) {
+            width: 360px;
+            margin: 0 auto;
+            padding: 0 22px;
         }
-    }
-    .lnb__info{
-        @include vw-convert-pc(margin,0 auto 60);
+        @include breakpoint(mo) {
+            @include vw-convert-mo(width,360);
+            margin: 0 auto;
+            @include vw-convert-mo(padding,0 22);
+        }
+        .logo a{
+            display: block;
+            @include vw-convert-pc(width,170);
+            @include vw-convert-pc(height,58);
+            @include vw-convert-pc(margin,0 auto 60);
+            img{
+                width: 100%;
+            }
+            @include breakpoint(tablet) {
+                width: 142px;
+                height: 36px;
+                margin: 14px 0 auto;
+            }
+            @include breakpoint(mo) {
+                @include vw-convert-mo(width,142);
+                @include vw-convert-mo(height,36);
+                @include vw-convert-mo(margin,14px 0 auto);
+            }
+        }
+        .lnb_content{
+            display: block;
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            @include breakpoint(mo) {
+                display: none;
+            }
+            .lnb__info{
+                @include vw-convert-pc(margin,0 auto 60);
+            }
+        }
+
+
+        .btn_menu{
+            display: none;
+        }
+        .btn_close{
+            display: none;
+        }
     }
 }

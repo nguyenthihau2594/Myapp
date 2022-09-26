@@ -1,4 +1,5 @@
-@import "../../../asset/styles/mixins";
+@import "../../../asset/styles/_variables.scss";
+@import "../../../asset/styles/_mixins.scss";
 
 
 .footer{
@@ -23,6 +24,15 @@
             top: 0;
             .sns__item:last-child{
                 @include vw-convert-pc(margin-left,20);
+            }
+            a{
+                display: inline-block;
+                @include vw-convert-pc(width,32);
+                @include vw-convert-pc(height,32);
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
         .copyright{

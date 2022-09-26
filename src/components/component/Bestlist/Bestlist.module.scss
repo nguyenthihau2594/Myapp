@@ -1,4 +1,5 @@
-@import "../../../asset/styles/mixins";
+@import "../../../asset/styles/_variables.scss";
+@import "../../../asset/styles/_mixins.scss";
 
 
 .news__wrap{
@@ -36,14 +37,14 @@
                 color: $white;
                 .thumb{
                     width: 100%;
-                    @include vw-convert-pc(height,146);
+                    height: 79.5%;
                     img{
                         width: 100%;
                         height: 100%;
                     }
                 }
                 .info{
-                    @include vw-convert-pc(padding,20 0 8);
+                    @include vw-convert-pc(padding,20 0 10);
                     .title{
                         @include vw-convert-pc(height, 21);
                         @include vw-convert-pc(margin-bottom, 4);
@@ -65,14 +66,20 @@
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
-                        @include vw-convert-pc(font-size,18);
+                        @include vw-convert-pc(font-size,16);
                         line-height: 1.22;
                         font-weight: bold;
                         color: #ff9600;
                         .icon{
                             display: block;
                             @include vw-convert-pc(margin-right, 4);
+                            @include vw-convert-pc(width, 12);
+                            @include vw-convert-pc(height, 12);
                             line-height: 0;
+                            svg{
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
                     }
                 }
