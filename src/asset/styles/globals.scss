@@ -1,19 +1,18 @@
+@import-normalize;
+@import './reset.scss';
+@import './mixins.scss';
+@import "./variables.scss";
 
-.is_pc{
-    display: block;
-    @include breakpoint(tablet) {
-      display: none;
-    }
-    @include breakpoint(mo) {
-      display: none;
-    }
-  }
-  .is_mo{
-    display: none;
-    @include breakpoint(tablet) {
-      display: block;
-    }
-    @include breakpoint(mo) {
-      display: block;
-    }
-  }
+body {
+  margin: 0;
+  font-family: "Montserrat", "Pretendard", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #130722 !important;
+}
+
+body[data-overflow="true"]{
+  overflow: hidden;
+}

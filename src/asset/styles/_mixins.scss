@@ -255,12 +255,12 @@
 }
 
 @mixin vw-font-size-mo($mo-pixel) {
-	font-size: $mo-pixel/414*828*1px;
-	font-size: $mo-pixel*100/414*1vw;
+	font-size: $mo-pixel/360*720*1px;
+	font-size: $mo-pixel*100/360*1vw;
 
-	@media (max-width: 414px) {
+	@media (max-width: 360px) {
 		font-size: $mo-pixel*1px;
-		font-size: $mo-pixel*100/414*1vw;
+		font-size: $mo-pixel*100/360*1vw;
 	}
 }
 
@@ -289,7 +289,7 @@
 		}
 	}
 
-	@else if $point==mobile {
+	@else if $point==mo {
 		@media screen and(max-width: $screen-mo) {
 			@content;
 		}
@@ -416,19 +416,19 @@
 
 @mixin vw-convert-mo($property, $mo-pixel) {
 	@if type-of($mo-pixel)==number {
-		#{$property}: $mo-pixel/414*828*1px;
-		#{$property}: $mo-pixel*100/414*1vw;
+		#{$property}: $mo-pixel/360*720*1px;
+		#{$property}: $mo-pixel*100/360*1vw;
 
-		@media (max-width: 414px) {
+		@media (max-width: 360px) {
 			#{$property}: $mo-pixel*1px;
-			#{$property}: $mo-pixel*100/414*1vw;
+			#{$property}: $mo-pixel*100/360*1vw;
 		}
 	}
 
 	@else if type-of($mo-pixel)==string {
 		#{$property}: auto;
 
-		@media (max-width: 414px) {
+		@media (max-width: 360px) {
 			#{$property}: auto;
 		}
 	}
@@ -439,8 +439,8 @@
 
 		@each $value in $mo-pixel {
 			@if type-of($value)==number {
-				$px: append($px, $value/414*828*1px);
-				$vw: append($vw, $value*100/414*1vw);
+				$px: append($px, $value/360*720*1px);
+				$vw: append($vw, $value*100/360*1vw);
 			}
 
 			@else if type-of($value)==string {
@@ -457,7 +457,7 @@
 		@each $value in $mo-pixel {
 			@if type-of($value)==number {
 				$px: append($px, $value*1px);
-				$vw: append($vw, $value*100/414*1vw);
+				$vw: append($vw, $value*100/360*1vw);
 			}
 
 			@else if type-of($value)==string {
@@ -466,7 +466,7 @@
 			}
 		}
 
-		@media (max-width:414px) {
+		@media (max-width:360px) {
 			#{$property}: $px;
 			#{$property}: $vw;
 		}

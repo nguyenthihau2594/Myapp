@@ -10,7 +10,7 @@
         padding-left: 0;
     }
     
-    @include breakpoint(mobile) {
+    @include breakpoint(mo) {
         padding-left: 0;
     }
     &::before{
@@ -27,7 +27,7 @@
             height: 250px;
         }
         
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(width, 360);
             @include vw-convert-mo(height, 250);
         }
@@ -42,6 +42,7 @@
     height: 100vh;
     @include vw-convert-pc(padding,38 16);
     background-color: #1a0e29;
+    transition: transform 1s;
 
     @include breakpoint(tablet) {
         position: fixed;
@@ -50,18 +51,24 @@
         width: 100%;
         height: 64px;
         padding: 0;
+        @include background-opacity($black,0.4);
     }
     
-    @include breakpoint(mobile) {
+    @include breakpoint(mo) {
         position: fixed;
         top:0;
         right: 0;
         width: 100%;
-        @include vw-convert-pc(height,64);
+        @include vw-convert-mo(height,64);
         padding: 0;
+    }
+    &.is_hidden{
+        transform: translateY(-100%);
     }
 }
 .main{
+    position: relative;
+    z-index: 101;
     width: 100%;
     @include vw-convert-pc(max-width,1674);
     @include vw-convert-pc(margin,0 auto);
@@ -69,12 +76,12 @@
         position: absolute;
         @include vw-convert-pc(top,20);
         @include vw-convert-pc(right,80);
-        z-index: 101;
+        z-index: 103;
         @include breakpoint(tablet) {
             display: none;
         }
         
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             display: none;
         }
     }

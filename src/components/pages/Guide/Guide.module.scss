@@ -10,7 +10,7 @@
     @include breakpoint(tablet) {
         padding: 50px 20px;
     }
-    @include breakpoint(mobile) {
+    @include breakpoint(mo) {
         @include vw-convert-mo(padding,50 20);
     }
     &__section{
@@ -19,7 +19,7 @@
         @include breakpoint(tablet) {
             margin-bottom: 30px;
         }
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(margin-bottom,30);
         }
     }
@@ -29,7 +29,7 @@
         @include breakpoint(tablet) {
             margin-bottom: 30px;
         }
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(margin-bottom,30);
         }
     }
@@ -43,7 +43,7 @@
             margin-bottom: 30px;
             font-size: 30px;
         }
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(margin-bottom,30);
             @include vw-convert-mo(font-size,30);
         }
@@ -56,7 +56,7 @@
             margin-bottom: 30px;
             font-size: 25px;
         }
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(margin-bottom,30);
             @include vw-convert-mo(font-size,25);
         }
@@ -69,7 +69,7 @@
             margin-bottom: 15px;
             font-size: 20px;
         }
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(margin-bottom,15);
             @include vw-convert-mo(font-size,20);
         }

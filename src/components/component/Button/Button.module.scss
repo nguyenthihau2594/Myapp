@@ -44,7 +44,7 @@
             font-size: 14px;
         }
         
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(height, 40);
             @include vw-convert-mo(padding, 0 24);
             @include vw-convert-mo(border-radius, 20);
@@ -86,7 +86,7 @@
             font-size: 14px;
         }
         
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(height, 40);
             @include vw-convert-mo(padding, 0 24);
             @include vw-convert-mo(border-radius, 20);
@@ -126,7 +126,7 @@
             font-size: 14px;
         }
         
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(height, 40);
             @include vw-convert-mo(padding, 0 24);
             @include vw-convert-mo(border-radius, 20);
@@ -166,7 +166,7 @@
             font-size: 14px;
         }
         
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(height, 44);
             @include vw-convert-mo(padding, 0 24);
             @include vw-convert-mo(border-radius, 22);
@@ -184,7 +184,7 @@
         @include breakpoint(tablet) {
             font-size: 14px;
         }
-        @include breakpoint(mobile) {
+        @include breakpoint(mo) {
             @include vw-convert-mo(font-size, 14);
         }
     }

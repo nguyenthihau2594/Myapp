@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useWindowSize } from "../../hooks/useWindowSize";
 import { Menu } from '@headlessui/react';
 import { Link } from "react-router-dom";
 import s from "./Myinfo.module.scss";
@@ -16,6 +17,7 @@ export interface MyinfoProps{
 }
 
 function Myinfo(props: MyinfoProps) {
+	const [windowWidth] = useWindowSize();
 
   const {isLogin=true,name,level=9}=props;
   const [levelProgress, setLevelProgress] = useState<number>(0);
@@ -49,7 +51,7 @@ function Myinfo(props: MyinfoProps) {
       :(
         <div className={cx(s.info)}>
           <div className={cx(s.avatar)}><img src={Avatar} alt="" /></div>
-          <span className={cx(s.name)}>{name}</span>
+          {windowWidth > 1024 && <span className={cx(s.name)}>{name}</span> }
           <div className={cx(s.level)}>
             <div className={cx(s.level__text)}>
               <span className={cx(s.ico_info)}><IconInfo /></span>
@@ -63,7 +65,7 @@ function Myinfo(props: MyinfoProps) {
         </div>
       )
       }
-      {isLogin && (
+      {isLogin && windowWidth > 1024 && (
       <>
       <Menu as="div" className={cx(s.menu)}>
         <Menu.Button as="button" className={cx(s.btn_menu)}><IconMenu /></Menu.Button>

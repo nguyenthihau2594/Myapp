@@ -3,14 +3,30 @@
 
 
 .lnb{
+    position: relative;
+    @include breakpoint(tablet) {
+        height: 64px;
+    }
+    @include breakpoint(mo) {
+        @include vw-convert-mo(height,64);
+    }
     .lnb_inner{
+        position: relative;
         @include breakpoint(tablet) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             width: 360px;
+            height: 64px;
             margin: 0 auto;
             padding: 0 22px;
         }
         @include breakpoint(mo) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             @include vw-convert-mo(width,360);
+            @include vw-convert-mo(height,64);
             margin: 0 auto;
             @include vw-convert-mo(padding,0 22);
         }
@@ -25,33 +41,105 @@
             @include breakpoint(tablet) {
                 width: 142px;
                 height: 36px;
-                margin: 14px 0 auto;
+                margin: 0;
             }
             @include breakpoint(mo) {
                 @include vw-convert-mo(width,142);
                 @include vw-convert-mo(height,36);
-                @include vw-convert-mo(margin,14px 0 auto);
+                margin: 0;
             }
         }
-        .lnb_content{
-            display: block;
+    }
+    .lnb_content{
+        @include breakpoint(tablet) {
+            position: absolute;
+            top:0;
+            right: -100%;
+            width: 100%;
+            background-color: #1a0e29;
+            transition: right 1s;
+        }
+        @include breakpoint(mo) {
+            position: absolute;
+            top:0;
+            right: -100%;
+            width: 100%;
+            background-color: #1a0e29;
+            transition: right 1s;
+        }
+
+        &.is_open{
             @include breakpoint(tablet) {
-                display: none;
+                right: 0;
             }
             @include breakpoint(mo) {
-                display: none;
-            }
-            .lnb__info{
-                @include vw-convert-pc(margin,0 auto 60);
+                right: 0;
             }
         }
-
-
-        .btn_menu{
-            display: none;
+        .lnb_box{
+            
+            @include breakpoint(tablet) {
+                position: relative;
+                width: 360px;
+                height: 100vh;
+                margin: 0 auto;
+                padding: 20px 22px;
+            }
+            @include breakpoint(mo) {
+                position: relative;
+                @include vw-convert-mo(width,360);
+                height: 100vh;
+                margin: 0 auto;
+                @include vw-convert-mo(padding,20 22);
+            }
         }
-        .btn_close{
-            display: none;
+        .lnb__info{
+            @include vw-convert-pc(margin,0 auto 60);
+        }
+    }
+
+
+    .btn_menu{
+        display: block;
+        position: absolute;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+        @include breakpoint(tablet) {
+            top: 12px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+        }
+        @include breakpoint(mo) {
+            @include vw-convert-mo(top,12);
+            @include vw-convert-mo(right,16);
+            @include vw-convert-mo(width,40);
+            @include vw-convert-mo(height,40);
+            @include vw-convert-mo(padding,8);
+        }
+    }
+    .btn_close{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+        @include breakpoint(tablet) {
+            top: 12px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+        }
+        @include breakpoint(mo) {
+            @include vw-convert-mo(top,12);
+            @include vw-convert-mo(right,16);
+            @include vw-convert-mo(width,40);
+            @include vw-convert-mo(height,40);
         }
     }
 }
