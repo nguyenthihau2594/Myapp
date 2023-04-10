@@ -4,10 +4,10 @@ const counterSlice = createSlice({
     name: 'counter', // tên chuỗi xác định slice
     initialState: 0, // giá trị khởi tạo ban đầu
     reducers: { // tạo các actions
-        increase(state, action) { //action increase
+        increase(state) { //action increase
             return state + 1;
         },
-        decrease(state, action) { //action decrease
+        decrease(state) { //action decrease
             return state - 1;
         },
     }

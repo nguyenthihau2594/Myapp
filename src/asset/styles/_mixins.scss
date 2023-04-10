@@ -278,19 +278,19 @@
 
 @mixin breakpoint($point) {
 	@if $point==desktop {
-		@media screen and(min-width: $screen-sm + 1px) {
+		@media screen and (min-width: $screen-sm + 1px) {
 			@content;
 		}
 	}
 
 	@else if $point==tablet {
-		@media screen and(max-width: ($screen-sm)) {
+		@media screen and (max-width: ($screen-sm)) {
 			@content;
 		}
 	}
 
 	@else if $point==mo {
-		@media screen and(max-width: $screen-mo) {
+		@media screen and (max-width: $screen-mo) {
 			@content;
 		}
 	}

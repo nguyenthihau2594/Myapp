@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { increase, decrease } from './counterSlice';
+import { RootState } from '../../Reduxcer/store';
 
-function CounterFeature(props) {
+function CounterFeature() {
     //lấy counter ở rootReducer
-    const counter = useSelector(state => state.counter) // useSelector là một hook giúp lấy 1 cái state trong root của mình
+    const counter = useSelector((state: RootState) => state?.counter) // useSelector là một hook giúp lấy 1 cái state trong root của mình
     const dispatch = useDispatch(); // sử dụng dispatch để gửi action
 
     const handleIncreaseClick = () => {
